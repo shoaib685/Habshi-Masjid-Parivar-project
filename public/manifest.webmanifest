@@ -1,0 +1,19 @@
+{
+  "id": "/",
+  "name": "Habshi Masjid Parivar",
+  "short_name": "Masjid Parivar",
+  "description": "Daily food duty, contributions and announcements for the Habshi Masjid community in Jalore.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F7F3E8",
+  "theme_color": "#0B4A2E",
+  "lang": "en-IN",
+  "categories": ["lifestyle", "social"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
