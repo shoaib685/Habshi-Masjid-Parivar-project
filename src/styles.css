@@ -1,0 +1,268 @@
+/*
+ * Tailwind v4 entry: config lives here, with no tailwind.config.js or PostCSS plugin.
+ * Keep every @import in this top block. Web fonts load via <link> in src/routes/__root.tsx.
+ */
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Habshi Masjid Parivar design system
+ * Deep emerald + warm gold on a soft cream ground. Fraunces for display,
+ * Manrope for UI text, Amiri for Arabic.
+ */
+
+@theme inline {
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: "Amiri", "Noto Naskh Arabic", serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-deep: var(--primary-deep);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-pending: var(--pending);
+  --color-pending-soft: var(--pending-soft);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 1rem;
+
+  --background: oklch(0.97 0.014 88);
+  --foreground: oklch(0.24 0.04 160);
+  --card: oklch(0.995 0.006 90);
+  --card-foreground: oklch(0.24 0.04 160);
+  --popover: oklch(0.995 0.006 90);
+  --popover-foreground: oklch(0.24 0.04 160);
+
+  --primary: oklch(0.4 0.085 158);
+  --primary-deep: oklch(0.3 0.07 160);
+  --primary-soft: oklch(0.93 0.035 155);
+  --primary-foreground: oklch(0.98 0.012 90);
+
+  --gold: oklch(0.78 0.125 78);
+  --gold-soft: oklch(0.95 0.045 85);
+  --gold-foreground: oklch(0.3 0.06 70);
+
+  --secondary: oklch(0.94 0.02 88);
+  --secondary-foreground: oklch(0.3 0.05 160);
+  --muted: oklch(0.945 0.016 88);
+  --muted-foreground: oklch(0.5 0.03 150);
+  --accent: oklch(0.93 0.03 150);
+  --accent-foreground: oklch(0.3 0.07 160);
+
+  --success: oklch(0.55 0.13 152);
+  --success-soft: oklch(0.94 0.05 152);
+  --warning: oklch(0.62 0.14 65);
+  --warning-soft: oklch(0.95 0.055 80);
+  --pending: oklch(0.56 0.16 30);
+  --pending-soft: oklch(0.95 0.035 35);
+
+  --destructive: oklch(0.56 0.2 27);
+  --destructive-foreground: oklch(0.98 0.01 90);
+  --border: oklch(0.9 0.02 88);
+  --input: oklch(0.88 0.022 88);
+  --ring: oklch(0.55 0.09 158);
+
+  --chart-1: oklch(0.4 0.085 158);
+  --chart-2: oklch(0.78 0.125 78);
+  --chart-3: oklch(0.6 0.1 158);
+  --chart-4: oklch(0.56 0.16 30);
+  --chart-5: oklch(0.85 0.05 150);
+
+  --sidebar: oklch(0.985 0.01 88);
+  --sidebar-foreground: oklch(0.24 0.04 160);
+  --sidebar-primary: oklch(0.4 0.085 158);
+  --sidebar-primary-foreground: oklch(0.98 0.012 90);
+  --sidebar-accent: oklch(0.93 0.03 150);
+  --sidebar-accent-foreground: oklch(0.3 0.07 160);
+  --sidebar-border: oklch(0.9 0.02 88);
+  --sidebar-ring: oklch(0.55 0.09 158);
+
+  --gradient-hero: radial-gradient(
+      120% 90% at 100% 0%,
+      oklch(0.5 0.1 155 / 0.9) 0%,
+      transparent 60%
+    ),
+    linear-gradient(155deg, var(--primary) 0%, var(--primary-deep) 100%);
+  --gradient-gold: linear-gradient(135deg, oklch(0.84 0.12 85), var(--gold));
+  --gradient-page: radial-gradient(
+    80% 40% at 50% 0%,
+    oklch(0.93 0.04 150 / 0.6) 0%,
+    transparent 70%
+  );
+
+  --shadow-card: 0 1px 2px oklch(0.3 0.05 160 / 0.04), 0 8px 24px -12px oklch(0.3 0.05 160 / 0.14);
+  --shadow-float: 0 -1px 0 oklch(0.3 0.05 160 / 0.04), 0 12px 40px -12px oklch(0.3 0.05 160 / 0.3);
+  --shadow-glow: 0 18px 40px -16px oklch(0.4 0.085 158 / 0.55);
+
+  /* 8-point star lattice used as a mask for the decorative pattern */
+  --pattern-star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='black' stroke-width='1'%3E%3Cpath d='M28 6l6 16 16 6-16 6-6 16-6-16-16-6 16-6z'/%3E%3Crect x='17' y='17' width='22' height='22' transform='rotate(45 28 28)'/%3E%3Crect x='17' y='17' width='22' height='22'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-background);
+    background-image: var(--gradient-page);
+    background-repeat: no-repeat;
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior-y: none;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  .surface-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-card);
+  }
+
+  .surface-hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--gradient-hero);
+    color: var(--primary-foreground);
+    border-radius: var(--radius-3xl);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .surface-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--gold);
+    opacity: 0.16;
+    -webkit-mask-image: var(--pattern-star);
+    mask-image: var(--pattern-star);
+    -webkit-mask-size: 56px 56px;
+    mask-size: 56px 56px;
+  }
+
+  .pattern-strip {
+    background-color: var(--gold);
+    opacity: 0.35;
+    -webkit-mask-image: var(--pattern-star);
+    mask-image: var(--pattern-star);
+    -webkit-mask-size: 28px 28px;
+    mask-size: 28px 28px;
+  }
+
+  .bottom-nav {
+    background-color: color-mix(in oklab, var(--card) 95%, transparent);
+    backdrop-filter: blur(18px) saturate(1.4);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+    box-shadow: var(--shadow-float);
+  }
+
+  .top-bar {
+    background-color: color-mix(in oklab, var(--background) 82%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .gold-chip {
+    background: var(--gradient-gold);
+    color: var(--gold-foreground);
+  }
+}
+
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@utility pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+
+@utility font-arabic {
+  font-family: var(--font-arabic);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-rise {
+  animation: rise-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise {
+    animation: none;
+  }
+}
